@@ -1,0 +1,17 @@
+# Criando projeto php usando Lumen (REST APIs do Laravel)
+      composer create-project --prefer-dist laravel/lumen NOME_DO_PROJETO
+
+# Iniciar servidor local do php
+      php -S 0.0.0.0:8000 -t public
+      php -S localhost:8000 -t public (não funciona com o Thunder Client no VSCode. Por isso a linha de cima)
+
+# Abilitando migrations
+      no arquivo bootstrap/app.php descomentar as linhas que chamam os métodos:
+        $app->withFacades()
+        $app->withEloquent()
+
+# Criando uma migration usando o artisan
+      php artisan make:migration create_TABELA_table --create=TABELA
+      
+# Aplicando uma migration (banco de dados deve existir)
+      php artisan migrate
