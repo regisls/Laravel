@@ -18,3 +18,6 @@
 
 # Criando um Seed
       php artisan make:seeder UFSeeder
+      
+# Aplicando um Seed no banco de dados
+      php artisan db:seed --class=UFSeeder
